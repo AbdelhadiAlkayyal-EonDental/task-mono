@@ -6,6 +6,10 @@
     "strings": true
   },
   "tailwindCSS.experimental.configFile": {
-    "apps/aligner/src/styles.css": "apps/aligner/**"
+    "apps/aligner/src/styles.css": [
+      "apps/aligner/**",
+      "packages/widgets/**",
+      "packages/shared/**"
+    ]
   }
 }

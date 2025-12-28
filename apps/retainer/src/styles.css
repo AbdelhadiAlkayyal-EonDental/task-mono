@@ -1,4 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@import '../../../packages/shared/ui/src/global.css';
+@source '../../../packages/shared/ui';
+@source '../../../packages/widgets';
+
 /* You can add global styles to this file, and also import other style files */
+@theme {
+  /* Extending the theme with custom values */
+  --font-display: 'Satoshi', 'sans-serif';
+
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+
+  --breakpoint-3xl: 1920px;
+}

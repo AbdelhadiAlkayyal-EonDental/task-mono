@@ -48,7 +48,8 @@
   "workspaces": [
     "packages/*",
     "apps/*",
-    "packages/shared/*"
+    "packages/shared/*",
+    "packages/widgets/*"
   ],
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
