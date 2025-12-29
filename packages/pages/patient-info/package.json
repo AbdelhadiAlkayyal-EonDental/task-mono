@@ -1,5 +1,5 @@
 {
-  "name": "@org/pages-impressions",
+  "name": "@org/pages-patientInfo",
   "version": "0.0.1",
   "type": "module",
   "main": "./src/index.js",

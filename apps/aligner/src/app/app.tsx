@@ -6,14 +6,10 @@ export function App() {
 
   return (
     <div className="h-screen grid grid-cols-[250px_1fr]">
-      <Sidebar
-        nameApp={'Aligner'}
-        onNavigate={(path) => navigate(path)}
-        activeLocation={location.pathname}
-      />
+      <Sidebar nameApp={'Aligner'} activeLocation={location.pathname} />
 
       <main className="bg-gray-50 p-8 h-full">
-        <Outlet />
+        <Outlet context={{ onNavigate: (path: string) => navigate(path) }} />
       </main>
     </div>
   );

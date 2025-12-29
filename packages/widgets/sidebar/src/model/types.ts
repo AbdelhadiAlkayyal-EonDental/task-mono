@@ -10,5 +10,4 @@ export interface ISidebarProps {
   backgroundColor?: string;
   logoUrl?: string;
   nameApp: 'Retainer' | 'Aligner';
-  onNavigate: (path: string) => void;
 }

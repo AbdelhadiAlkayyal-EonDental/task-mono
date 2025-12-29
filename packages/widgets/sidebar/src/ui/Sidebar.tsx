@@ -1,15 +1,8 @@
 import { Button } from '@org/ui';
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { IMenuItem, ISidebarProps } from '../model/types';
 
-export function Sidebar({
-  nameApp,
-  logoUrl,
-  onNavigate,
-  activeLocation,
-}: ISidebarProps) {
-  const [activeItem, setActiveItem] = useState<string>(activeLocation ?? '/');
-
+export function Sidebar({ nameApp, logoUrl, activeLocation }: ISidebarProps) {
   const menuItems = useMemo<IMenuItem[]>(() => {
     const allItems: IMenuItem[] = [
       { id: '1', label: 'Patient Information', icon: '🏠', path: '/' },
@@ -24,11 +17,6 @@ export function Sidebar({
       : allItems.filter((item) => item.id !== '2');
   }, [nameApp]);
 
-  const onItemClick = (item: IMenuItem) => {
-    setActiveItem(item.path);
-    onNavigate(item.path);
-  };
-
   return (
     <aside className="border-r bg-background p-6">
       {logoUrl && (
@@ -41,9 +29,8 @@ export function Sidebar({
         {menuItems.map((item) => (
           <Button
             key={item.id}
-            variant={activeItem === item.path ? 'default' : 'ghost'}
-            className="w-full justify-start"
-            onClick={() => onItemClick(item)}
+            variant={activeLocation === item.path ? 'default' : 'ghost'}
+            className="w-full justify-start cursor-auto"
           >
             <span>{item.icon}</span>
             <span>{item.label}</span>
