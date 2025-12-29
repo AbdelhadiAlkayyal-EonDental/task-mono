@@ -21,7 +21,7 @@ export function Sidebar({
 
     return nameApp === 'Aligner'
       ? allItems
-      : allItems.filter((item) => item.id !== '3');
+      : allItems.filter((item) => item.id !== '2');
   }, [nameApp]);
 
   const onItemClick = (item: IMenuItem) => {

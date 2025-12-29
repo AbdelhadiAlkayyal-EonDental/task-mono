@@ -9,7 +9,9 @@
     "apps/aligner/src/styles.css": [
       "apps/aligner/**",
       "packages/widgets/**",
-      "packages/shared/**"
-    ]
+      "packages/shared/**",
+      "packages/pages/**"
+    ],
+    "apps/retainer/src/styles.css": ["apps/retainer/**", "packages/pages/**"]
   }
 }

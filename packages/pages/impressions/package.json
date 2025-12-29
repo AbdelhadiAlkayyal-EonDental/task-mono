@@ -1,5 +1,5 @@
 {
-  "name": "@org/ui",
+  "name": "@org/pages-impressions",
   "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
@@ -13,9 +13,5 @@
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     }
-  },
-  "dependencies": {
-    "@radix-ui/react-select": "^2.2.6",
-    "@radix-ui/react-slot": "^1.2.4"
   }
 }

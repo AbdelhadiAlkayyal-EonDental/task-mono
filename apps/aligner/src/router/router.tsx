@@ -1,5 +1,11 @@
+import { OrgPagesImpressions } from '@org/pages-impressions';
+import { OrgPagesPatientInfo } from '@org/pages-patientInfo';
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../app/app';
+import { OrgPagesPrescription } from '@org/pages-prescription';
+
+import { OrgPagesSummary } from '@org/pages-summary';
+import PhotoAndXray from '../pages/PhotoAndXray';
 
 const router = createBrowserRouter(
   [
@@ -10,23 +16,23 @@ const router = createBrowserRouter(
       children: [
         {
           index: true,
-          element: <div> first</div>,
+          element: <OrgPagesPatientInfo />,
         },
         {
           path: '/photo',
-          element: <div> second</div>,
+          element: <PhotoAndXray />,
         },
         {
           path: '/impressions',
-          element: <div> third</div>,
+          element: <OrgPagesImpressions />,
         },
         {
           path: '/prescription',
-          element: <div> fourth</div>,
+          element: <OrgPagesPrescription />,
         },
         {
           path: '/summary',
-          element: <div> fifth</div>,
+          element: <OrgPagesSummary />,
         },
       ],
     },

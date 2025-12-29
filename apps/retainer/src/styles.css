@@ -3,6 +3,7 @@
 @import '../../../packages/shared/ui/src/global.css';
 @source '../../../packages/shared/ui';
 @source '../../../packages/widgets';
+@source '../../../packages/pages'
 
 /* You can add global styles to this file, and also import other style files */
 @theme {

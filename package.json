@@ -49,7 +49,8 @@
     "packages/*",
     "apps/*",
     "packages/shared/*",
-    "packages/widgets/*"
+    "packages/widgets/*",
+    "packages/pages/*"
   ],
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",

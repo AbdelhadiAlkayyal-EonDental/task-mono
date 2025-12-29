@@ -14,6 +14,18 @@
     },
     {
       "path": "./packages/widgets/sidebar"
+    },
+    {
+      "path": "./packages/pages/patient-info"
+    },
+    {
+      "path": "./packages/pages/impressions"
+    },
+    {
+      "path": "./packages/pages/prescription"
+    },
+    {
+      "path": "./packages/pages/summary"
     }
   ]
 }
