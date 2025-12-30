@@ -1,1 +1,1 @@
-export * from './lib/prescription';
+export { OrgPagesPrescription } from './ui/prescription';

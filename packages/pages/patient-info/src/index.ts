@@ -1,1 +1,1 @@
-export * from './lib/patient-info';
+export * from './ui/patient-info';

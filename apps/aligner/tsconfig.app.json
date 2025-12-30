@@ -39,7 +39,16 @@
       "path": "../../packages/pages/prescription/tsconfig.lib.json"
     },
     {
+      "path": "../../packages/pages/patient-info/tsconfig.lib.json"
+    },
+    {
       "path": "../../packages/pages/impressions/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/shared/ui/tsconfig.lib.json"
+    },
+    {
+      "path": "../../packages/widgets/file-uploader/tsconfig.lib.json"
     },
     {
       "path": "../../packages/widgets/sidebar/tsconfig.lib.json"

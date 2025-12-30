@@ -26,6 +26,12 @@
     },
     {
       "path": "./packages/pages/patient-info"
+    },
+    {
+      "path": "./packages/widgets/file-uploader"
+    },
+    {
+      "path": "./packages/entities/summary"
     }
   ]
 }

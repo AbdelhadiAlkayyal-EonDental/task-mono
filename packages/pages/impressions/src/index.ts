@@ -1,1 +1,1 @@
-export * from './lib/impressions';
+export * from './ui/impressions';

@@ -5,7 +5,7 @@ import App from '../app/app';
 import { OrgPagesPrescription } from '@org/pages-prescription';
 
 import { OrgPagesSummary } from '@org/pages-summary';
-import PhotoAndXray from '../pages/PhotoAndXray';
+import { PhotoAndXray } from '../pages/photo-and-xray/index';
 
 const router = createBrowserRouter(
   [

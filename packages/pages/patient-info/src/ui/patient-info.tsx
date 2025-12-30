@@ -1,12 +1,11 @@
 import { Button, Input } from '@org/ui';
 import { useCallback, useRef } from 'react';
 import { useOutletContext } from 'react-router-dom';
+import { OutletContext } from '@org/pages-summary';
 
-type OutletContext = {
-  onNavigate: (path: string) => void;
-};
 export function OrgPagesPatientInfo() {
-  const { onNavigate } = useOutletContext<OutletContext>();
+  const { onNavigate, isAligner, dispatchActionHandler } =
+    useOutletContext<OutletContext>();
 
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -22,11 +21,14 @@ export function OrgPagesPatientInfo() {
         lastName: string;
         doctorName: string;
       };
-      onNavigate('/photo');
 
-      console.log(data);
+      dispatchActionHandler({
+        type: 'patientInfo',
+        payload: data,
+      });
+      onNavigate(isAligner ? '/photo' : '/impressions');
     },
-    [onNavigate],
+    [onNavigate, isAligner, dispatchActionHandler],
   );
 
   return (
@@ -60,10 +62,11 @@ export function OrgPagesPatientInfo() {
           required
         />
       </div>
-
-      <Button type="submit" className="hover:bg-black ">
-        Next
-      </Button>
+      <div className="flex justify-end">
+        <Button type="submit" className="hover:bg-black ">
+          Next
+        </Button>
+      </div>
     </form>
   );
 }
