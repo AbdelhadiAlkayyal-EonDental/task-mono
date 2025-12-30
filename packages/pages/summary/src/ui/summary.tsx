@@ -53,43 +53,6 @@ export function OrgPagesSummary() {
         </CardContent>
       </Card>
 
-      {/* Prescription Details */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <FileText className="h-5 w-5" />
-            Prescription Details
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="space-y-1">
-              <p className="text-sm font-medium text-gray-500">
-                Chief Complaint
-              </p>
-              <p className="text-base text-gray-900 whitespace-pre-wrap">
-                {state.prescription.complaint || 'N/A'}
-              </p>
-            </div>
-            <div className="space-y-1">
-              <p className="text-sm font-medium text-gray-500">
-                Additional Notes
-              </p>
-              <p className="text-base text-gray-900 whitespace-pre-wrap">
-                {state.prescription.notes || 'N/A'}
-              </p>
-            </div>
-          </div>
-          <Separator />
-          <div className="space-y-1">
-            <p className="text-sm font-medium text-gray-500">Treatment Arch</p>
-            <Badge variant="secondary" className="text-sm px-3 py-1">
-              {state.prescription.arch}
-            </Badge>
-          </div>
-        </CardContent>
-      </Card>
-
       {/* Photos - Optional */}
       {isAligner && (
         <Card>
@@ -144,7 +107,42 @@ export function OrgPagesSummary() {
           />
         </CardContent>
       </Card>
-
+      {/* Prescription Details */}
+      <Card>
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <FileText className="h-5 w-5" />
+            Prescription Details
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-1">
+              <p className="text-sm font-medium text-gray-500">
+                Chief Complaint
+              </p>
+              <p className="text-base text-gray-900 whitespace-pre-wrap">
+                {state.prescription.complaint || 'N/A'}
+              </p>
+            </div>
+            <div className="space-y-1">
+              <p className="text-sm font-medium text-gray-500">
+                Additional Notes
+              </p>
+              <p className="text-base text-gray-900 whitespace-pre-wrap">
+                {state.prescription.notes || 'N/A'}
+              </p>
+            </div>
+          </div>
+          <Separator />
+          <div className="space-y-1">
+            <p className="text-sm font-medium text-gray-500">Treatment Arch</p>
+            <Badge variant="secondary" className="text-sm px-3 py-1">
+              {state.prescription.arch}
+            </Badge>
+          </div>
+        </CardContent>
+      </Card>
       {/* Action Buttons */}
       <div className="flex justify-end mt-6">
         <Button onClick={() => resetHandler()} className="hover:bg-black">

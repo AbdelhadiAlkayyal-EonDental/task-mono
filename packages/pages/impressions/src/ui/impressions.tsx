@@ -1,5 +1,5 @@
 import useImpressions from '../model/useImpressions';
-import { FileUploader } from '@org/widgets-fileUploader';
+import { FileUploader } from '@org/widgets-file-uploader';
 import { Button } from '@org/ui';
 import { IUploadState } from '../model/impressions.types';
 export function OrgPagesImpressions() {
